@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Nave : MonoBehaviour
 {
-
-    private float velocidad = 2;
-
+    [SerializeField] private float velocidad = 6;
+    private float velocidadDisparo = 2;
+    [SerializeField] private Transform prefabDisparo; 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,12 @@ public class Nave : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         transform.Translate(horizontal * velocidad * Time.deltaTime, 0, 0);
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Transform disparo = Instantiate(prefabDisparo, transform.position, Quaternion.identity);
+            disparo.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, velocidadDisparo, 0);
+        }
     }
+
 }
