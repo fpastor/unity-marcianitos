@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class Nave : MonoBehaviour
 {
-    [SerializeField] private float velocidad = 6;
-    private float velocidadDisparo = 2;
-    [SerializeField] private Transform prefabDisparo; 
-    
+    [SerializeField] private float velocidad = 5;
+    private float velocidadDisparo = 5;
+    [SerializeField] private Transform prefabDisparo;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame

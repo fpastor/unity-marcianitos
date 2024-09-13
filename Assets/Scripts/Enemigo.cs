@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class Enemigo : MonoBehaviour {
+public class Enemigo : MonoBehaviour
+{
 
     private float velocidadX = 2;
     private float velocidadY = -1.1f;
@@ -14,7 +15,8 @@ public class Enemigo : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         transform.Translate(velocidadX * Time.deltaTime,
         velocidadY * Time.deltaTime, 0);
         if ((transform.position.x < -4) || (transform.position.x > 4))

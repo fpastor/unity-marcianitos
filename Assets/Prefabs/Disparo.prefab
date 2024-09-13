@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9065678831089961039}
   - component: {fileID: 9163195460796679185}
   - component: {fileID: 5696812599870177934}
+  - component: {fileID: 3751615112470093278}
   m_Layer: 0
   m_Name: Disparo
   m_TagString: Untagged
@@ -158,3 +159,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24, y: 0.24}
   m_EdgeRadius: 0
+--- !u!114 &3751615112470093278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8565143339368008863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b365dd953468ff4aa8e8d24960ee07c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
