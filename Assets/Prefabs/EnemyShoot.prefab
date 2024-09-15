@@ -171,4 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c76b4e001ab08a49b7100143d2cdf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabStarship: {fileID: 5696068441021181018, guid: 0d07bb1fe2279aa409847a1f80bb908f, type: 3}
   prefabExplosion: {fileID: 5923905748361002011, guid: c0a9fbc13ea3fd24ea18b5d6914b5032, type: 3}

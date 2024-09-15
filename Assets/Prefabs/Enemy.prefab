@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3607dcca6ddfff74fb2a1eba78732317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabStarship: {fileID: 5696068441021181018, guid: 0d07bb1fe2279aa409847a1f80bb908f, type: 3}
   prefabEnemyShoot: {fileID: 3768848270399166326, guid: 1cff052bcaa0ebf4197614072c48b504, type: 3}
+  prefabExplosion: {fileID: 5923905748361002011, guid: c0a9fbc13ea3fd24ea18b5d6914b5032, type: 3}
 --- !u!95 &6134293331805968313
 Animator:
   serializedVersion: 5

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] Transform prefabExplosion;
+    [SerializeField] private Starship prefavStarship;
+    [SerializeField] private Transform prefabExplosion;
     private float velocidadDisparo = 5;
 
     void Start()
@@ -23,6 +24,7 @@ public class Shoot : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Transform explosion = Instantiate(prefabExplosion, other.transform.position, Quaternion.identity);
+            Starship.score += 10;
             Destroy(other.gameObject);
             Destroy(explosion.gameObject, 1f);
             Destroy(gameObject);

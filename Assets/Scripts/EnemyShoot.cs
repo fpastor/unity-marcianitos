@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyShoot : MonoBehaviour
 {
-    [SerializeField] Transform prefabExplosion;
+    [SerializeField] private Transform prefabExplosion;
     private float velocidadDisparo = -5;
 
     void Start()
@@ -23,7 +24,11 @@ public class EnemyShoot : MonoBehaviour
         if (other.tag == "Starship")
         {
             Transform explosion = Instantiate(prefabExplosion, other.transform.position, Quaternion.identity);
-            Destroy(other.gameObject);
+            if (Starship.lives > 0)
+            {
+                Starship.lives -= 1;
+                other.transform.SetPositionAndRotation(new Vector3(0, -2.5f, 0), Quaternion.identity);
+            }
             Destroy(explosion.gameObject, 1f);
             Destroy(gameObject);
         }
