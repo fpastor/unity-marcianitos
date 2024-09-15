@@ -22,6 +22,7 @@ public class Nave : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
+            GetComponent<AudioSource>().Play();
             Transform disparo = Instantiate(prefabDisparo, transform.position, Quaternion.identity);
             disparo.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, velocidadDisparo, 0);
         }

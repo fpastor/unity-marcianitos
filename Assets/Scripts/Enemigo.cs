@@ -17,8 +17,8 @@ public class Enemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(velocidadX * Time.deltaTime,
-        velocidadY * Time.deltaTime, 0);
+        transform.Translate(velocidadX * Time.deltaTime,velocidadY * Time.deltaTime, 0);
+
         if ((transform.position.x < -4) || (transform.position.x > 4))
             velocidadX = -velocidadX;
         if ((transform.position.y < -2.5) || (transform.position.y > 2.5))
