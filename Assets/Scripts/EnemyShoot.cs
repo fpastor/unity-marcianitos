@@ -2,27 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Disparo : MonoBehaviour
+public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] Transform prefabExplosion;
+    private float velocidadDisparo = -5;
 
-    // Start is called before the first frame update
     void Start()
     {
+        GetComponent<Rigidbody2D>().velocity = new Vector3(0, velocidadDisparo, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (transform.position.y > 5)
+        if (transform.position.y < -5)
             Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Starship")
         {
-            // Instanciamos la explosión.
             Transform explosion = Instantiate(prefabExplosion, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             Destroy(explosion.gameObject, 1f);
